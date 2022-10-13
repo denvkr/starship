@@ -367,15 +367,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "starship-45-22.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "starship-45-22.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "starship6.png",
         "kind": "image",
         "metadata": "",
@@ -598,6 +589,24 @@
         "name": "engine_flame_left.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "starship-45-22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "starship-45-22.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "starship-down-right-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "starship-down-right-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1000,7 +1009,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "starship-45-2.png",
+                      "image": "starship-down-right-1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1304,7 +1313,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
                   "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
@@ -1384,7 +1393,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
@@ -1464,7 +1473,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
@@ -1544,7 +1553,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
@@ -1624,7 +1633,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
@@ -1704,7 +1713,7 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
+                  "looping": true,
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
@@ -1862,6 +1871,435 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "upper-right",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "MouseY"
+                  },
+                  "parameters": [
+                    "",
+                    "<",
+                    "Starship.Y()",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseX"
+                  },
+                  "parameters": [
+                    "",
+                    ">",
+                    "(Starship.X()+64)",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Starship",
+                "=",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "Starship.X()"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "ScoreTxt",
+                "=",
+                "ToString(Variable(score))"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "Starship.X()-15",
+                "=",
+                "Starship.Y()+25"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "upper-left",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "MouseY"
+                  },
+                  "parameters": [
+                    "",
+                    "<",
+                    "Starship.Y()",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseX"
+                  },
+                  "parameters": [
+                    "",
+                    "<",
+                    "(Starship.X()-64)",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Starship",
+                "=",
+                "4"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "Starship.X()"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "ScoreTxt",
+                "=",
+                "ToString(Variable(score))"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "Starship.X()+25",
+                "=",
+                "Starship.Y()+25"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "down-right",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "MouseY"
+                  },
+                  "parameters": [
+                    "",
+                    ">",
+                    "Starship.Y()",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseX"
+                  },
+                  "parameters": [
+                    "",
+                    ">",
+                    "(Starship.X()+64)",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Starship",
+                "=",
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "Starship.X()"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "ScoreTxt",
+                "=",
+                "ToString(Variable(score))"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "4"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "Starship.X()-17",
+                "=",
+                "Starship.Y()-20"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "down-left",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "MouseY"
+                  },
+                  "parameters": [
+                    "",
+                    ">",
+                    "Starship.Y()",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseX"
+                  },
+                  "parameters": [
+                    "",
+                    "<",
+                    "(Starship.X()-64)",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Starship",
+                "=",
+                "6"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "Starship.X()"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "ScoreTxt",
+                "=",
+                "ToString(Variable(score))"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "5"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "Starship.X()+24",
+                "=",
+                "Starship.Y()-16"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "move down",
+          "comment2": ""
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -1884,18 +2322,30 @@
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "MouseX"
+                  },
+                  "parameters": [
+                    "",
+                    ">",
+                    "Starship.X()",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
                   },
                   "parameters": [],
                   "subInstructions": [
                     {
                       "type": {
-                        "value": "MouseX"
+                        "value": "MouseY"
                       },
                       "parameters": [
                         "",
                         ">=",
-                        "(Starship.X()-10)",
+                        "Starship.Y()",
                         "\"Base layer\"",
                         "0"
                       ]
@@ -1906,8 +2356,8 @@
                       },
                       "parameters": [
                         "",
-                        "<=",
-                        "(Starship.X()+10)",
+                        "<",
+                        "(Starship.X()+64)",
                         "\"Base layer\"",
                         "0"
                       ]
@@ -1947,8 +2397,43 @@
                 "=",
                 "ToString(Variable(score))"
               ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "Starship.X()",
+                "=",
+                "Starship.Y()-15"
+              ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "move up",
+          "comment2": ""
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -1959,6 +2444,18 @@
               },
               "parameters": [],
               "subInstructions": [
+                {
+                  "type": {
+                    "value": "MouseX"
+                  },
+                  "parameters": [
+                    "",
+                    ">",
+                    "Starship.X()",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                },
                 {
                   "type": {
                     "value": "MouseY"
@@ -1973,18 +2470,18 @@
                 },
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Or"
+                    "value": "BuiltinCommonInstructions::And"
                   },
                   "parameters": [],
                   "subInstructions": [
                     {
                       "type": {
-                        "value": "MouseX"
+                        "value": "MouseY"
                       },
                       "parameters": [
                         "",
-                        ">=",
-                        "(Starship.X()-10)",
+                        "<",
+                        "Starship.Y()",
                         "\"Base layer\"",
                         "0"
                       ]
@@ -1995,8 +2492,8 @@
                       },
                       "parameters": [
                         "",
-                        "<=",
-                        "(Starship.X()+10)",
+                        "<",
+                        "(Starship.X()+64)",
                         "\"Base layer\"",
                         "0"
                       ]
@@ -2036,146 +2533,43 @@
                 "=",
                 "ToString(Variable(score))"
               ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::And"
-              },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "MouseY"
-                  },
-                  "parameters": [
-                    "",
-                    "<",
-                    "Starship.Y()",
-                    "\"Base layer\"",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MouseX"
-                  },
-                  "parameters": [
-                    "",
-                    ">",
-                    "(Starship.X()+10)",
-                    "\"Base layer\"",
-                    "0"
-                  ]
-                }
-              ]
-            }
-          ],
-          "actions": [
+            },
             {
               "type": {
                 "value": "ChangeAnimation"
               },
               "parameters": [
-                "Starship",
+                "engineFire",
                 "=",
-                "3"
+                "0"
               ]
             },
             {
               "type": {
-                "value": "ModVarScene"
+                "value": "MettreXY"
               },
               "parameters": [
-                "score",
+                "engineFire",
                 "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
+                "Starship.X()",
                 "=",
-                "ToString(Variable(score))"
+                "Starship.Y()+64"
               ]
             }
           ]
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::And"
-              },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "MouseY"
-                  },
-                  "parameters": [
-                    "",
-                    "<",
-                    "Starship.Y()",
-                    "\"Base layer\"",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MouseX"
-                  },
-                  "parameters": [
-                    "",
-                    "<",
-                    "(Starship.X()-10)",
-                    "\"Base layer\"",
-                    "0"
-                  ]
-                }
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "Starship",
-                "=",
-                "4"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
-              ]
-            }
-          ]
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "move right",
+          "comment2": ""
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -2193,213 +2587,6 @@
                   "parameters": [
                     "",
                     ">",
-                    "Starship.Y()",
-                    "\"Base layer\"",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MouseX"
-                  },
-                  "parameters": [
-                    "",
-                    ">",
-                    "(Starship.X()+10)",
-                    "\"Base layer\"",
-                    "0"
-                  ]
-                }
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "Starship",
-                "=",
-                "5"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::And"
-              },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "MouseY"
-                  },
-                  "parameters": [
-                    "",
-                    ">",
-                    "Starship.Y()",
-                    "\"Base layer\"",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MouseX"
-                  },
-                  "parameters": [
-                    "",
-                    "<",
-                    "(Starship.X()-10)",
-                    "\"Base layer\"",
-                    "0"
-                  ]
-                }
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "Starship",
-                "=",
-                "6"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::And"
-              },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "MouseY"
-                  },
-                  "parameters": [
-                    "",
-                    "=",
-                    "Starship.Y()",
-                    "\"Base layer\"",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "MouseX"
-                  },
-                  "parameters": [
-                    "",
-                    "<",
-                    "(Starship.X()-10)",
-                    "\"Base layer\"",
-                    "0"
-                  ]
-                }
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ChangeAnimation"
-              },
-              "parameters": [
-                "Starship",
-                "=",
-                "7"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::And"
-              },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "MouseY"
-                  },
-                  "parameters": [
-                    "",
-                    "=",
                     "Starship.Y()",
                     "\"Base layer\"",
                     "0"
@@ -2412,9 +2599,41 @@
                   "parameters": [
                     "",
                     ">=",
-                    "(Starship.X()+10)",
+                    "Starship.X()",
                     "\"Base layer\"",
                     "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "MouseX"
+                      },
+                      "parameters": [
+                        "",
+                        ">=",
+                        "Starship.X()",
+                        "\"Base layer\"",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MouseY"
+                      },
+                      "parameters": [
+                        "",
+                        "<",
+                        "(Starship.Y()+64)",
+                        "\"Base layer\"",
+                        "0"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -2438,7 +2657,7 @@
               "parameters": [
                 "score",
                 "=",
-                "Starship.X()"
+                "Starship.Y()"
               ]
             },
             {
@@ -2449,6 +2668,164 @@
                 "ScoreTxt",
                 "=",
                 "ToString(Variable(score))"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "6"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "Starship.X()-15",
+                "=",
+                "Starship.Y()"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "move left",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "MouseY"
+                  },
+                  "parameters": [
+                    "",
+                    ">",
+                    "Starship.Y()",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseX"
+                  },
+                  "parameters": [
+                    "",
+                    "<",
+                    "Starship.X()",
+                    "\"Base layer\"",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "MouseX"
+                      },
+                      "parameters": [
+                        "",
+                        "<",
+                        "Starship.X()",
+                        "\"Base layer\"",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MouseY"
+                      },
+                      "parameters": [
+                        "",
+                        "<",
+                        "(Starship.Y()+64)",
+                        "\"Base layer\"",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Starship",
+                "=",
+                "7"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "Starship.Y()"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "ScoreTxt",
+                "=",
+                "ToString(Variable(score))"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "7"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "engineFire",
+                "=",
+                "Starship.X()+64",
+                "=",
+                "Starship.Y()"
               ]
             }
           ]
