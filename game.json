@@ -29,13 +29,13 @@
     "verticalSync": false,
     "platformSpecificAssets": {},
     "loadingScreen": {
-      "backgroundColor": 0,
-      "backgroundFadeInDuration": 0.2,
-      "backgroundImageResourceName": "",
-      "gdevelopLogoStyle": "light",
-      "logoAndProgressFadeInDuration": 0.2,
-      "logoAndProgressLogoFadeInDelay": 0.2,
-      "minDuration": 1.5,
+      "backgroundColor": 3157550,
+      "backgroundFadeInDuration": 0.3,
+      "backgroundImageResourceName": "NewFile-1.png",
+      "gdevelopLogoStyle": "dark-colored",
+      "logoAndProgressFadeInDuration": 0.3,
+      "logoAndProgressLogoFadeInDelay": 0,
+      "minDuration": 2.5,
       "progressBarColor": 16777215,
       "progressBarHeight": 20,
       "progressBarMaxWidth": 200,
@@ -607,6 +607,15 @@
         "name": "starship-down-right-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewFile-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewFile-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -616,15 +625,15 @@
   "variables": [],
   "layouts": [
     {
-      "b": 209,
+      "b": 74,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Untitled_32scene",
-      "name": "Untitled scene",
-      "r": 209,
+      "mangledName": "Starship_32fly_32scene",
+      "name": "Starship fly scene",
+      "r": 74,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
+      "title": "Starship scene",
+      "v": 74,
       "uiSettings": {
         "grid": true,
         "gridType": "rectangular",
@@ -635,7 +644,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.809199999999999,
+        "zoomFactor": 0.7091999999999989,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -705,6 +714,66 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 800,
+          "layer": "",
+          "name": "borderLR",
+          "persistentUuid": "3f2d725b-ac54-4892-89fb-ba95b9d1e46c",
+          "width": 30,
+          "x": 600,
+          "y": 0,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "name": "borderBT",
+          "persistentUuid": "8b2e3ca8-728e-4c4b-b117-7f156f318464",
+          "width": 608,
+          "x": 0,
+          "y": 800,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 800,
+          "layer": "",
+          "name": "borderRR",
+          "persistentUuid": "a20f3ee1-53f6-49c9-90d8-63f2155e3e62",
+          "width": 37,
+          "x": -35,
+          "y": 0,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "name": "borderUP",
+          "persistentUuid": "00e21452-b093-4a32-85d5-79d54cfe1a19",
+          "width": 600,
+          "x": 0,
+          "y": -32,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -716,7 +785,31 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Dynamic",
+              "bullet": true,
+              "fixedRotation": false,
+              "canSleep": false,
+              "shape": "Box",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.9,
+              "restitution": 0.1,
+              "linearDamping": 0,
+              "angularDamping": 0,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
           "animations": [
             {
               "name": "starship",
@@ -1789,6 +1882,218 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 800,
+          "name": "borderLR",
+          "tags": "",
+          "texture": "",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 5,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "leftEdgeAnchor": 1,
+              "name": "Anchor",
+              "rightEdgeAnchor": 0,
+              "type": "AnchorBehavior::AnchorBehavior",
+              "relativeToOriginalWindowSize": true,
+              "useLegacyBottomAndRightAnchors": false,
+              "bottomEdgeAnchor": 0,
+              "topEdgeAnchor": 0
+            },
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Kinematic",
+              "bullet": true,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 5,
+              "shapeDimensionB": 800,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.5,
+              "restitution": 0.1,
+              "linearDamping": 0,
+              "angularDamping": 0,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            },
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 800,
+          "name": "borderRR",
+          "tags": "",
+          "texture": "",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 5,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Anchor",
+              "type": "AnchorBehavior::AnchorBehavior",
+              "leftEdgeAnchor": 0,
+              "relativeToOriginalWindowSize": true,
+              "rightEdgeAnchor": 2,
+              "useLegacyBottomAndRightAnchors": false,
+              "bottomEdgeAnchor": 0,
+              "topEdgeAnchor": 0
+            },
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Kinematic",
+              "bullet": true,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 5,
+              "shapeDimensionB": 800,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.5,
+              "restitution": 0.1,
+              "linearDamping": 0,
+              "angularDamping": 0,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            },
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 5,
+          "name": "borderBT",
+          "tags": "",
+          "texture": "",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 600,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Anchor",
+              "type": "AnchorBehavior::AnchorBehavior",
+              "bottomEdgeAnchor": 2,
+              "rightEdgeAnchor": 0,
+              "leftEdgeAnchor": 0,
+              "relativeToOriginalWindowSize": true,
+              "useLegacyBottomAndRightAnchors": false,
+              "topEdgeAnchor": 0
+            },
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Kinematic",
+              "bullet": true,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 600,
+              "shapeDimensionB": 5,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.5,
+              "restitution": 0.1,
+              "linearDamping": 0,
+              "angularDamping": 0,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            },
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 5,
+          "name": "borderUP",
+          "tags": "",
+          "texture": "",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 600,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "bottomEdgeAnchor": 0,
+              "name": "Anchor",
+              "topEdgeAnchor": 1,
+              "type": "AnchorBehavior::AnchorBehavior",
+              "rightEdgeAnchor": 0,
+              "leftEdgeAnchor": 0,
+              "relativeToOriginalWindowSize": true,
+              "useLegacyBottomAndRightAnchors": false
+            },
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Kinematic",
+              "bullet": true,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 600,
+              "shapeDimensionB": 5,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.5,
+              "restitution": 0.1,
+              "linearDamping": 0,
+              "angularDamping": 0,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            },
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ]
         }
       ],
       "events": [
@@ -2834,6 +3139,170 @@
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::Collision"
+              },
+              "parameters": [
+                "borderLR",
+                "Physics2",
+                "Starship",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::SetFixedRotation"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics2::ApplyImpulse"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "-0.08",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::Collision"
+              },
+              "parameters": [
+                "borderBT",
+                "Physics2",
+                "Starship",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::SetFixedRotation"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics2::ApplyImpulse"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "",
+                "-0.08",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::Collision"
+              },
+              "parameters": [
+                "borderRR",
+                "Physics2",
+                "Starship",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::SetFixedRotation"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics2::ApplyImpulse"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "0.08",
+                "",
+                "",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::Collision"
+              },
+              "parameters": [
+                "borderUP",
+                "Physics2",
+                "Starship",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::SetFixedRotation"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics2::ApplyImpulse"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "",
+                "0.08",
+                "",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -2860,7 +3329,24 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": []
+      "behaviorsSharedData": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior"
+        },
+        {
+          "name": "Physics2",
+          "type": "Physics2::Physics2Behavior",
+          "gravityX": 1,
+          "gravityY": 1,
+          "scaleX": 100,
+          "scaleY": 100
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        }
+      ]
     }
   ],
   "externalEvents": [],
