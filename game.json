@@ -23,7 +23,7 @@
     "author": "denvkr",
     "windowWidth": 600,
     "windowHeight": 800,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "E:\\OpenServer54\\domains\\cnabstudio.local\\public_html\\starship",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -616,6 +616,96 @@
         "name": "NewFile-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "planet1.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "planet1.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "planet1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "planet1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "planet2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "planet2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "planet22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "planet22.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "planet23.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "planet23.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "spacebase1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "spacebase1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "spacebase12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "spacebase12.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Box1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Box1-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Box2-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Box2-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Box-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Box-1.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -771,6 +861,51 @@
           "x": 0,
           "y": -32,
           "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 96,
+          "layer": "",
+          "name": "Planet1",
+          "persistentUuid": "76ba8194-d6a6-4a20-a728-6919d13ab0c2",
+          "width": 96,
+          "x": 384,
+          "y": 608,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Planet2",
+          "persistentUuid": "8cea6609-4bc6-4709-9efb-70d394aab2ac",
+          "width": 0,
+          "x": 136,
+          "y": 96,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "name": "spacebase1",
+          "persistentUuid": "0496ea75-73ae-4396-ad94-06959e6aac50",
+          "width": 68,
+          "x": 32,
+          "y": 0,
+          "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1895,10 +2030,10 @@
           "effects": [],
           "behaviors": [
             {
-              "leftEdgeAnchor": 1,
               "name": "Anchor",
-              "rightEdgeAnchor": 0,
               "type": "AnchorBehavior::AnchorBehavior",
+              "leftEdgeAnchor": 1,
+              "rightEdgeAnchor": 0,
               "relativeToOriginalWindowSize": true,
               "useLegacyBottomAndRightAnchors": false,
               "bottomEdgeAnchor": 0,
@@ -2054,10 +2189,10 @@
           "effects": [],
           "behaviors": [
             {
-              "bottomEdgeAnchor": 0,
               "name": "Anchor",
-              "topEdgeAnchor": 1,
               "type": "AnchorBehavior::AnchorBehavior",
+              "bottomEdgeAnchor": 0,
+              "topEdgeAnchor": 1,
               "rightEdgeAnchor": 0,
               "leftEdgeAnchor": 0,
               "relativeToOriginalWindowSize": true,
@@ -2094,9 +2229,497 @@
               "yGrabOffset": 0
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Planet1",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Kinematic",
+              "bullet": true,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.3,
+              "restitution": 0.1,
+              "linearDamping": 0,
+              "angularDamping": 0,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            },
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "planet1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "planet1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Planet2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Kinematic",
+              "bullet": true,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.3,
+              "restitution": 0.1,
+              "linearDamping": 0,
+              "angularDamping": 0,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            },
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "Planet2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "planet23.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "spacebase1",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Dynamic",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.3,
+              "restitution": 0.1,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "spacebase12.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "debugtxt",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "0",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "debugtxt2",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "0",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "PosText",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "0",
+          "font": "",
+          "characterSize": 25,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "Box",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Dynamic",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.3,
+              "restitution": 0.1,
+              "linearDamping": 0,
+              "angularDamping": 0,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "Box1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Box1-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Box2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Box2-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Box3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Box-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::SetFixedRotation"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "Starship",
+                "\"starship\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics2::SetFixedRotation"
+              },
+              "parameters": [
+                "spacebase1",
+                "Physics2",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "aroundangle",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreAutour"
+              },
+              "parameters": [
+                "spacebase1",
+                "Planet2",
+                "130",
+                "Variable(aroundangle)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"spacestation1rotation\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"box1timer\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -2130,30 +2753,6 @@
           "conditions": [
             {
               "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetAnimationName"
-              },
-              "parameters": [
-                "Starship",
-                "\"starship\""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
                 "value": "SourisSurObjet"
               },
               "parameters": [
@@ -2171,6 +2770,17 @@
               },
               "parameters": [
                 "Starship"
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics2::AngularVelocity"
+              },
+              "parameters": [
+                "spacebase1",
+                "Physics2",
+                "=",
+                "1"
               ]
             }
           ]
@@ -2233,26 +2843,6 @@
                 "Starship",
                 "=",
                 "3"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
               ]
             },
             {
@@ -2341,26 +2931,6 @@
             },
             {
               "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
-              ]
-            },
-            {
-              "type": {
                 "value": "ChangeAnimation"
               },
               "parameters": [
@@ -2445,26 +3015,6 @@
             },
             {
               "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
-              ]
-            },
-            {
-              "type": {
                 "value": "ChangeAnimation"
               },
               "parameters": [
@@ -2545,26 +3095,6 @@
                 "Starship",
                 "=",
                 "6"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
               ]
             },
             {
@@ -2685,26 +3215,6 @@
             },
             {
               "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
-              ]
-            },
-            {
-              "type": {
                 "value": "ChangeAnimation"
               },
               "parameters": [
@@ -2817,26 +3327,6 @@
                 "Starship",
                 "=",
                 "2"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.X()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
               ]
             },
             {
@@ -2957,26 +3447,6 @@
             },
             {
               "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.Y()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
-              ]
-            },
-            {
-              "type": {
                 "value": "ChangeAnimation"
               },
               "parameters": [
@@ -3093,26 +3563,6 @@
             },
             {
               "type": {
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "score",
-                "=",
-                "Starship.Y()"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextObject::String"
-              },
-              "parameters": [
-                "ScoreTxt",
-                "=",
-                "ToString(Variable(score))"
-              ]
-            },
-            {
-              "type": {
                 "value": "ChangeAnimation"
               },
               "parameters": [
@@ -3134,11 +3584,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -3300,6 +3745,352 @@
                 "0.08",
                 "",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Planet1",
+                "Starship",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::SetFixedRotation"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics2::ApplyImpulse"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "0.04",
+                "0.04",
+                "1",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Planet2",
+                "Starship",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::SetFixedRotation"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "Physics2::ApplyImpulse"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "0.04",
+                "0.04",
+                "1",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::Collision"
+              },
+              "parameters": [
+                "spacebase1",
+                "Physics2",
+                "Starship",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SceneInstancesCount"
+              },
+              "parameters": [
+                "",
+                "Box",
+                ">",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::SetFixedRotation"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Box",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "Variable(score)+1"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "ScoreTxt",
+                "=",
+                "VariableString(score)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"box1timer\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "spacebase1",
+                "\"spacestation1rotation\"",
+                ">=",
+                "0.2"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "aroundangle",
+                "=",
+                "Variable(aroundangle)+1"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "debugtxt",
+                "=",
+                "ToString(spacebase1.Variable(t1))"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreAutour"
+              },
+              "parameters": [
+                "spacebase1",
+                "Planet2",
+                "130",
+                "Variable(aroundangle)"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"spacestation1rotation\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"box1timer\"",
+                ">=",
+                "RandomInRange(10, 40)"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Box",
+                "Planet1.X()+130",
+                "Planet1.Y()+130",
+                "\"Base layer\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Box",
+                "=",
+                "RandomInRange(0, 2)"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreAutour"
+              },
+              "parameters": [
+                "Box",
+                "Planet1",
+                "130",
+                "Random(360)"
+              ]
+            },
+            {
+              "type": {
+                "value": "RemoveTimer"
+              },
+              "parameters": [
+                "",
+                "\"box1timer\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "aroundangle",
+                "=",
+                "360"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "aroundangle",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::Collision"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "Box",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::AddRopeJoint"
+              },
+              "parameters": [
+                "Box",
+                "Physics2",
+                "Box.X()",
+                "Box.Y()",
+                "Starship",
+                "Starship.X()",
+                "Starship.Y()",
+                "50",
+                "yes",
+                "v2"
               ]
             }
           ]
