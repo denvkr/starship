@@ -7,10 +7,10 @@
     "revision": 0
   },
   "properties": {
-    "adaptGameResolutionAtRuntime": true,
+    "adaptGameResolutionAtRuntime": false,
     "folderProject": false,
     "orientation": "portrait",
-    "packageName": "com.example.gamename",
+    "packageName": "com.cnabstudio.spacedelivery",
     "pixelsRounding": false,
     "projectUuid": "6248dd5c-52cd-411d-8017-c2a703a0e649",
     "scaleMode": "linear",
@@ -19,8 +19,8 @@
     "useExternalSourceFiles": false,
     "version": "1.0.0",
     "name": "SpaceDelivery",
-    "description": "Check any planetary bazar for different products and have delivery it to aimed destination",
-    "author": "denvkr",
+    "description": "Check any planetary bazar for different products and deliver it to aimed destination",
+    "author": "cnabstudio,denvkr",
     "windowWidth": 600,
     "windowHeight": 800,
     "latestCompilationDirectory": "E:\\OpenServer54\\domains\\cnabstudio.local\\public_html\\starship",
@@ -47,8 +47,13 @@
     "authorIds": [
       "ENYpALGzdxdAhxdZjLqvUlRcSDr2"
     ],
-    "categories": [],
-    "playableDevices": [],
+    "categories": [
+      "action"
+    ],
+    "playableDevices": [
+      "keyboard",
+      "mobile"
+    ],
     "extensionProperties": [],
     "platforms": [
       {
@@ -706,6 +711,36 @@
         "name": "Box-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "boxhook.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "boxhook.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "starshipengine.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "starshipengine.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "boxdelivered.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "boxdelivered.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -783,8 +818,8 @@
           "name": "ScoreTxt",
           "persistentUuid": "5e4b3dfd-e4d5-4e6a-8025-ab55957c0fd7",
           "width": 0,
-          "x": 512,
-          "y": 32,
+          "x": 562,
+          "y": 4,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -906,6 +941,21 @@
           "x": 32,
           "y": 0,
           "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "ScoreCapTxt",
+          "persistentUuid": "34185642-3ed7-4735-a1cc-7ed822b34384",
+          "width": 0,
+          "x": 478,
+          "y": 4,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2624,6 +2674,27 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "ScoreCapTxt",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Score",
+          "font": "",
+          "characterSize": 25,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -2714,6 +2785,26 @@
               },
               "parameters": [
                 "score",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "boxcolliding",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "spacestationcolliding",
                 "=",
                 "0"
               ]
@@ -3835,11 +3926,6 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
@@ -3906,11 +3992,148 @@
             },
             {
               "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "boxcolliding",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
                 "value": "ResetTimer"
               },
               "parameters": [
                 "",
                 "\"box1timer\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::Collision"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "Box",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Physics2::AddRopeJoint"
+              },
+              "parameters": [
+                "Box",
+                "Physics2",
+                "Box.X()",
+                "Box.Y()",
+                "Starship",
+                "Starship.X()+64",
+                "Starship.Y()+64",
+                "1",
+                "yes",
+                "v2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::Collision"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "Box",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "VarScene"
+              },
+              "parameters": [
+                "boxcolliding",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "boxhook.mp3",
+                "",
+                "10",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "boxcolliding",
+                "=",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::Collision"
+              },
+              "parameters": [
+                "Starship",
+                "Physics2",
+                "spacebase1",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "boxdelivered.mp3",
+                "",
+                "10",
+                ""
               ]
             }
           ]
@@ -4038,6 +4261,40 @@
           "conditions": [
             {
               "type": {
+                "value": "MouseButtonPressed"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "starshipengine.mp3",
+                "",
+                "1",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "VarScene"
               },
               "parameters": [
@@ -4056,41 +4313,6 @@
                 "aroundangle",
                 "=",
                 "0"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Physics2::Collision"
-              },
-              "parameters": [
-                "Starship",
-                "Physics2",
-                "Box",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Physics2::AddRopeJoint"
-              },
-              "parameters": [
-                "Box",
-                "Physics2",
-                "Box.X()",
-                "Box.Y()",
-                "Starship",
-                "Starship.X()",
-                "Starship.Y()",
-                "50",
-                "yes",
-                "v2"
               ]
             }
           ]
