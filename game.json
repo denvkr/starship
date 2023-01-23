@@ -750,6 +750,150 @@
         "name": "NewSprite-1.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "spacebase22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "spacebase22.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "spacebase23.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "spacebase23.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "spacebase24.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "spacebase24.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "spacebase25.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "spacebase25.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-12.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-22.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-13.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-23.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-23.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-14.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-14.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-24.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-24.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-15.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-15.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-25.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-25.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-16.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-16.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "power-engine2-26.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "power-engine2-26.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -965,6 +1109,21 @@
           "x": 478,
           "y": 4,
           "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "engineFire2",
+          "persistentUuid": "8576d1a3-47f3-44d9-a689-8d6ebb7801d7",
+          "width": 0,
+          "x": 32,
+          "y": 64,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1418,6 +1577,7 @@
           "behaviors": [],
           "string": "0",
           "font": "",
+          "textAlignment": "",
           "characterSize": 25,
           "color": {
             "b": 0,
@@ -2495,6 +2655,35 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "spacebase25.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -2512,6 +2701,7 @@
           "behaviors": [],
           "string": "0",
           "font": "",
+          "textAlignment": "",
           "characterSize": 20,
           "color": {
             "b": 0,
@@ -2533,6 +2723,7 @@
           "behaviors": [],
           "string": "0",
           "font": "",
+          "textAlignment": "",
           "characterSize": 20,
           "color": {
             "b": 0,
@@ -2554,6 +2745,7 @@
           "behaviors": [],
           "string": "0",
           "font": "",
+          "textAlignment": "",
           "characterSize": 25,
           "color": {
             "b": 0,
@@ -2698,6 +2890,7 @@
           "behaviors": [],
           "string": "Score",
           "font": "",
+          "textAlignment": "",
           "characterSize": 25,
           "color": {
             "b": 0,
@@ -2750,6 +2943,64 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "NewSprite-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "engineFire2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "engine",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "power-engine2-16.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "power-engine2-26.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2890,6 +3141,37 @@
                 "spacestationcolliding",
                 "=",
                 "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "spacebase1",
+                "=",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "engineFire2",
+                "\"engine\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "engineFire2",
+                "=",
+                "spacebase1.X()+22",
+                "=",
+                "spacebase1.Y()+72"
               ]
             }
           ]
@@ -4275,6 +4557,18 @@
               "parameters": [
                 "",
                 "\"spacestation1rotation\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "engineFire2",
+                "=",
+                "spacebase1.X()+22",
+                "=",
+                "spacebase1.Y()+72"
               ]
             }
           ]
