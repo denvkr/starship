@@ -44,9 +44,14 @@
       "showGDevelopSplash": true,
       "showProgressBar": true
     },
+    "watermark": {
+      "placement": "bottom-left",
+      "showWatermark": true
+    },
     "authorIds": [
       "ENYpALGzdxdAhxdZjLqvUlRcSDr2"
     ],
+    "authorUsernames": [],
     "categories": [
       "action"
     ],
@@ -894,6 +899,69 @@
         "name": "power-engine2-26.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_12.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_12.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_1-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_1-2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_13.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_13.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_1-22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_1-22.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "denvkr_vulcan_pixel_art_style_planet_for_2d_game_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "denvkr_vulcan_pixel_art_style_planet_for_2d_game_1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "denvkr_vulcan_pixel_art_style_planet_for_2d_game_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "denvkr_vulcan_pixel_art_style_planet_for_2d_game_2.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2500,7 +2568,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "planet1.png",
+                      "image": "denvkr_vulcan_pixel_art_style_planet_for_2d_game_1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2572,7 +2640,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "planet23.png",
+                      "image": "denvkr_vulcan_pixel_art_style_planet_for_2d_game_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2937,12 +3005,29 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.07999999821186066,
+                  "looping": true,
+                  "timeBetweenFrames": 0.1,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewSprite-1.png",
+                      "image": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_13.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_1-22.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4783,7 +4868,7 @@
                 "",
                 "darkstar",
                 "RandomInRange(20, 500)",
-                "RandomInRange(20, 700)",
+                "RandomInRange(120, 600)",
                 ""
               ]
             },
@@ -4829,6 +4914,60 @@
               },
               "parameters": [
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Planet1",
+                "darkstar",
+                "darkstar",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "darkstar"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Planet2",
+                "darkstar",
+                "darkstar",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "darkstar"
               ]
             }
           ]
