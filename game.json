@@ -962,6 +962,15 @@
         "name": "denvkr_vulcan_pixel_art_style_planet_for_2d_game_2.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/New image.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "New image",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2973,7 +2982,24 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "effects": [],
+          "effects": [
+            {
+              "effectType": "Adjustment",
+              "name": "Effect-darkstar",
+              "doubleParameters": {
+                "alpha": 1,
+                "blue": 0.6,
+                "brightness": 1,
+                "contrast": 1,
+                "gamma": 1,
+                "green": 1,
+                "red": 1,
+                "saturation": 2
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [
             {
               "name": "Physics2",
@@ -2994,7 +3020,7 @@
               "restitution": 0.1,
               "linearDamping": 0,
               "angularDamping": 0,
-              "gravityScale": 0,
+              "gravityScale": 0.5,
               "layers": 1,
               "masks": 1
             }
@@ -3006,41 +3032,223 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 0.1,
+                  "timeBetweenFrames": 0.2,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_13.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 49.899267705477165,
+                        "y": 58.31083227445998
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 49.899267705477165,
+                        "y": 58.163704607771024
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1.6413930654525757,
+                            "y": 69.93391418457031
+                          },
+                          {
+                            "x": 1.200010061264038,
+                            "y": 48.30615234375
+                          },
+                          {
+                            "x": 6.643733501434326,
+                            "y": 35.358917236328125
+                          },
+                          {
+                            "x": 19.149585723876953,
+                            "y": 20.20476722717285
+                          },
+                          {
+                            "x": 35.7750129699707,
+                            "y": 12.259872436523438
+                          },
+                          {
+                            "x": 47.39809799194336,
+                            "y": 9.611574172973633
+                          },
+                          {
+                            "x": 59.46256637573242,
+                            "y": 10.788596153259277
+                          },
+                          {
+                            "x": 63.72926712036133,
+                            "y": 0.48965927958488464
+                          },
+                          {
+                            "x": 100,
+                            "y": 0
+                          },
+                          {
+                            "x": 83.59150695800781,
+                            "y": 21.823171615600586
+                          },
+                          {
+                            "x": 94.03756713867188,
+                            "y": 36.83019256591797
+                          },
+                          {
+                            "x": 98.89278411865234,
+                            "y": 52.7199821472168
+                          },
+                          {
+                            "x": 98.01001739501953,
+                            "y": 72.58221435546875
+                          },
+                          {
+                            "x": 92.71341705322266,
+                            "y": 83.91104888916016
+                          },
+                          {
+                            "x": 81.67884063720703,
+                            "y": 96.71115112304688
+                          },
+                          {
+                            "x": 69.46724700927734,
+                            "y": 104.65604400634766
+                          },
+                          {
+                            "x": 56.22575759887695,
+                            "y": 106.42157745361328
+                          },
+                          {
+                            "x": 52.69469451904297,
+                            "y": 110
+                          },
+                          {
+                            "x": 40.483097076416016,
+                            "y": 110
+                          },
+                          {
+                            "x": 37.98192596435547,
+                            "y": 105.24456024169922
+                          },
+                          {
+                            "x": 27.241607666015625,
+                            "y": 104.50891876220703
+                          },
+                          {
+                            "x": 10.321925163269043,
+                            "y": 92.73870849609375
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "denvkr_black_hole_in_space_in_galactic_in_2d_pixel_art_game_1-22.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 49.899267705477165,
+                        "y": 58.31083227445998
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 49.899267705477165,
+                        "y": 58.163704607771024
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1.6413930654525757,
+                            "y": 69.93391418457031
+                          },
+                          {
+                            "x": 1.200010061264038,
+                            "y": 48.30615234375
+                          },
+                          {
+                            "x": 6.643733501434326,
+                            "y": 35.358917236328125
+                          },
+                          {
+                            "x": 19.149585723876953,
+                            "y": 20.20476722717285
+                          },
+                          {
+                            "x": 35.7750129699707,
+                            "y": 12.259872436523438
+                          },
+                          {
+                            "x": 47.39809799194336,
+                            "y": 9.611574172973633
+                          },
+                          {
+                            "x": 59.46256637573242,
+                            "y": 10.788596153259277
+                          },
+                          {
+                            "x": 63.72926712036133,
+                            "y": 0.48965927958488464
+                          },
+                          {
+                            "x": 100,
+                            "y": 0
+                          },
+                          {
+                            "x": 83.59150695800781,
+                            "y": 21.823171615600586
+                          },
+                          {
+                            "x": 94.03756713867188,
+                            "y": 36.83019256591797
+                          },
+                          {
+                            "x": 98.89278411865234,
+                            "y": 52.7199821472168
+                          },
+                          {
+                            "x": 98.01001739501953,
+                            "y": 72.58221435546875
+                          },
+                          {
+                            "x": 92.71341705322266,
+                            "y": 83.91104888916016
+                          },
+                          {
+                            "x": 81.67884063720703,
+                            "y": 96.71115112304688
+                          },
+                          {
+                            "x": 69.46724700927734,
+                            "y": 104.65604400634766
+                          },
+                          {
+                            "x": 56.22575759887695,
+                            "y": 106.42157745361328
+                          },
+                          {
+                            "x": 52.69469451904297,
+                            "y": 110
+                          },
+                          {
+                            "x": 40.483097076416016,
+                            "y": 110
+                          },
+                          {
+                            "x": 37.98192596435547,
+                            "y": 105.24456024169922
+                          },
+                          {
+                            "x": 27.241607666015625,
+                            "y": 104.50891876220703
+                          },
+                          {
+                            "x": 10.321925163269043,
+                            "y": 92.73870849609375
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -4826,6 +5034,50 @@
             },
             {
               "type": {
+                "value": "SetEffectStringParameter"
+              },
+              "parameters": [
+                "darkstar",
+                "\"Effect-darkstar\"",
+                "\"green\"",
+                "ToString(RandomInRange(1, 5))"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetEffectStringParameter"
+              },
+              "parameters": [
+                "darkstar",
+                "\"Effect-darkstar\"",
+                "\"red\"",
+                "ToString(RandomInRange(1, 5))"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetEffectStringParameter"
+              },
+              "parameters": [
+                "darkstar",
+                "\"Effect-darkstar\"",
+                "\"blue\"",
+                "ToString(RandomInRange(1, 5))"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetEffectStringParameter"
+              },
+              "parameters": [
+                "darkstar",
+                "\"Effect-darkstar\"",
+                "\"gamma\"",
+                "ToString(RandomInRange(1, 5))"
+              ]
+            },
+            {
+              "type": {
                 "value": "RemoveTimer"
               },
               "parameters": [
@@ -4862,14 +5114,11 @@
             },
             {
               "type": {
-                "value": "Create"
+                "value": "RemoveTimer"
               },
               "parameters": [
                 "",
-                "darkstar",
-                "RandomInRange(20, 500)",
-                "RandomInRange(120, 600)",
-                ""
+                "\"darkstaractivity\""
               ]
             },
             {
@@ -4883,11 +5132,14 @@
             },
             {
               "type": {
-                "value": "RemoveTimer"
+                "value": "Create"
               },
               "parameters": [
                 "",
-                "\"darkstaractivity\""
+                "darkstar",
+                "RandomInRange(20, 500)",
+                "RandomInRange(120, 600)",
+                ""
               ]
             }
           ]
@@ -4956,6 +5208,33 @@
                 "Planet2",
                 "darkstar",
                 "darkstar",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "darkstar"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "spacebase1",
+                "darkstar",
+                "",
                 "",
                 ""
               ]
